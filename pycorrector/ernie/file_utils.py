@@ -27,7 +27,7 @@ from pycorrector.utils.logger import logger
 
 
 # def _fetch_from_remote(url, force_download=False, cached_dir='~/.paddle-ernie-cache'):
-def _fetch_from_remote(url, force_download=False, cached_dir='../datasets/.paddle-ernie-cache'):
+def _fetch_from_remote(url, force_download=False, cached_dir='/pycorrector/pycorrector/datasets/.paddle-ernie-cache'):
     import hashlib, requests, tarfile
     sig = hashlib.md5(url.encode('utf8')).hexdigest()
     cached_dir = Path(cached_dir).expanduser()
